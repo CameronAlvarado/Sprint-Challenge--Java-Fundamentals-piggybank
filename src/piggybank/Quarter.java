@@ -6,16 +6,18 @@ public class Quarter extends Coins
 	public Quarter()
 	{
 		this.value = 0.25;
+		this.count = 1;
 	}
 
+	// @Override
+	// public double getTotal()
+	// {
+	// 	return this.count * this.value;
+	// }
+
 	@Override
-	public int newCoin(int coin)
-	{
-		return count + coin;
-	}
-	@Override
-	public Integer getCount()
-	{
-		return this.count;
-	}
+	public String toString()
+ 	{
+        return count + " " + "Quarter";
+    }
 }

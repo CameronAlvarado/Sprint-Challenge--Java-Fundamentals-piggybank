@@ -3,19 +3,33 @@ package piggybank;
 public class Dime extends Coins
 {
 
+	public Dime(int count)
+	{
+		this.value = 0.10;
+		this.count = count;
+	}
+
 	public Dime()
 	{
 		this.value = 0.10;
+		this.count = 1;
 	}
 
+	// @Override
+	// public double getTotal()
+	// {
+	// 	return this.count * this.value;
+	// }
+
 	@Override
-	public int newCoin(int coin)
-	{
-		return count + coin;
-	}
-	@Override
-	public Integer getCount()
-	{
-		return this.count;
-	}
+	public String toString()
+ 	{
+ 		if (count == 1)
+ 		{
+        	return count + " " + "Dime";
+    	} else 
+    	{
+    		return count + " " + "Dimes";
+    	}
+    }
 }

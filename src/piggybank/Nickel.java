@@ -3,19 +3,21 @@ package piggybank;
 public class Nickel extends Coins
 {
 
-	public Nickel()
+	public Nickel(int count)
 	{
 		this.value = 0.05;
+		this.count = count;
 	}
 
+	// @Override
+	// public double getTotal()
+	// {
+	// 	return this.count * this.value;
+	// }
+
 	@Override
-	public int newCoin(int coin)
-	{
-		return count + coin;
-	}
-	@Override
-	public Integer getCount()
-	{
-		return this.count;
-	}
+	public String toString()
+ 	{
+        return count + " " + "Nickels";
+    }
 }

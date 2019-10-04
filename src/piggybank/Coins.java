@@ -1,25 +1,38 @@
 package piggybank;
 
+import java.text.DecimalFormat;
+
 public abstract class Coins
 {
-	protected int count = 1;
+	DecimalFormat fp = new DecimalFormat("$###,###.00");
+	protected int count = 0;
 	protected double value = 0;
 
 	public Coins(int count)
 	{
-		this.count = count;
+		this.count = this.count + count;
+		// this.value = value;
 	}
 
 	public Coins()
 	{
-		this.count = this.count + 1;
+		this.count = count + 1;
 	}
 
-	public abstract Integer getCount();
+
+	public double getTotal()
+	{
+		return this.count * this.value;
+	}
 
 	public void setCount(int count)
 	{
 		this.count = this.count + count;
+	}
+
+	public String printValue(double value)
+	{
+		return "The piggy bank holds " + fp.format(value);
 	}
 
 	public Double getValue()
@@ -27,22 +40,22 @@ public abstract class Coins
 		return this.value;
 	}
 
-	public Double getTotal()
-	{
-		return value * this.count;
-	}	
+	// public Double getTotal()
+	// {
+	// 	return value * this.count;
+	// }	
 
-	public int addCoin()
-	{
-		return this.count + 1;
-	}
+	// public int addCoin()
+	// {
+	// 	return this.count + 1;
+	// }
 
 	// public void addValue(double val)
 	// {
 	// 	this.value = value + val;
 	// }
 
-	public abstract int newCoin(int coin);
+	// public abstract int newCoin(int coin);
 	// public Double newDime(int coin)
 	// {
 	// 	addCoin(coin);
