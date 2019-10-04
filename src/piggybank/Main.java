@@ -5,12 +5,6 @@ import java.text.DecimalFormat;
 
 public class Main
 {
-	// public static ArrayList<Coins> filteredList = new ArrayList<>();
-
-	// public static void printCoins(ArrayList<Coins> coins, CheckCoins tester)
-	// {
-
-	// }
 
 	public static void main(String[] args)
 	{
@@ -33,9 +27,6 @@ public class Main
 		piggyBank.add(dime2);
 		piggyBank.add(dollar2);
 		piggyBank.add(penny);
-
-		// piggyBank.sort((a1, a2) -> a2.getCount().compareTo(a1.getCount()));
-		// piggyBank.forEach((a) -> System.out.println(a.getCount()));
 
 		System.out.println("Using For Loop\n ");
 		for (int i = 0; i < piggyBank.size();i++) 

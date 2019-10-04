@@ -9,12 +9,6 @@ public class Nickel extends Coins
 		this.count = count;
 	}
 
-	// @Override
-	// public double getTotal()
-	// {
-	// 	return this.count * this.value;
-	// }
-
 	@Override
 	public String toString()
  	{
